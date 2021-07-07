@@ -1,3 +1,4 @@
+
 package com.moringaschool.myrestaurants.ui;
 
 import android.os.Bundle;
@@ -33,11 +34,13 @@ public class RestaurantDetailFragment extends Fragment {
     @BindView(R.id.addressTextView) TextView mAddressLabel;
     @BindView(R.id.saveRestaurantButton) TextView mSaveRestaurantButton;
 
+
     private Business mRestaurant;
 
     public RestaurantDetailFragment() {
         // Required empty public constructor
     }
+
 
     public static RestaurantDetailFragment newInstance(Business restaurant) {
         RestaurantDetailFragment restaurantDetailFragment = new RestaurantDetailFragment();
@@ -60,7 +63,7 @@ public class RestaurantDetailFragment extends Fragment {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_restaurant_detail, container, false);
         ButterKnife.bind(this, view);
-       // Picasso.get().load(mRestaurant.getImageUrl()).into(mImageLabel);
+        // Picasso.get().load(mRestaurant.getImageUrl()).into(mImageLabel);
 
         List<String> categories = new ArrayList<>();
 

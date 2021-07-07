@@ -5,25 +5,18 @@
     android:layout_height="match_parent"
     tools:context=".ui.RestaurantDetailFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
-
-
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/colorAccent">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="180dp"
-        android:id="@+id/restaurantImageView"
-        android:src="@drawable/waffles"
-        android:scaleType="centerCrop" />
+        <ImageView
+            android:id="@+id/restaurantImageView"
+            android:layout_width="match_parent"
+            android:layout_height="187dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/waffles" />
 
     <RelativeLayout
         android:layout_width="match_parent"

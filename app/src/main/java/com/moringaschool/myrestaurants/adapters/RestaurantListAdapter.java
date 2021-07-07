@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.moringaschool.myrestaurants.R;
 import com.moringaschool.myrestaurants.models.Business;
 import com.moringaschool.myrestaurants.ui.RestaurantDetailActivity;
+import com.squareup.picasso.Picasso;
 
 import org.parceler.Parcels;
 
@@ -65,6 +66,7 @@ public class RestaurantListAdapter  extends RecyclerView.Adapter<RestaurantListA
         }
 
         public void bindRestaurant(Business restaurant) {
+            Picasso.get().load(restaurant.getImageUrl()).into(mRestaurantImageView);
             mNameTextView.setText(restaurant.getName());
             mCategoryTextView.setText(restaurant.getCategories().get(0).getTitle());
             mRatingTextView.setText("Rating: " + restaurant.getRating() + "/5");
@@ -78,5 +80,6 @@ public class RestaurantListAdapter  extends RecyclerView.Adapter<RestaurantListA
             intent.putExtra("restaurants", Parcels.wrap(mRestaurants));
             mContext.startActivity(intent);
         }
+
     }
 }

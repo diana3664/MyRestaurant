@@ -22,11 +22,11 @@ public class RestaurantDetailActivity extends AppCompatActivity {
     private RestaurantPagerAdapter adapterViewPager;
     List<Business> mRestaurants;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_restaurant_detail);
-
         ButterKnife.bind(this);
 
         mRestaurants = Parcels.unwrap(getIntent().getParcelableExtra("restaurants"));
@@ -35,6 +35,8 @@ public class RestaurantDetailActivity extends AppCompatActivity {
         adapterViewPager = new RestaurantPagerAdapter(getSupportFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT, mRestaurants);
         mViewPager.setAdapter(adapterViewPager);
         mViewPager.setCurrentItem(startingPosition);
+
+
     }
 
 }
